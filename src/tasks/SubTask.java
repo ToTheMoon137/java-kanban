@@ -22,6 +22,10 @@ public class SubTask extends Task {
         return epicId;
     }
 
+    public void setEpicId(int epicId) {
+        this.epicId = epicId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
