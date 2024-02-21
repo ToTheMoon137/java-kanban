@@ -5,11 +5,10 @@ import status.Status;
 import java.util.Objects;
 
 public class Task {
+    private int taskID;
     private String nameTask;
     private String description;
     private Status status;
-    private int taskID;
-
 
     public Task(String nameTask, String description, Status status) {
         this.nameTask = nameTask;
@@ -46,12 +45,29 @@ public class Task {
         return status;
     }
 
+    public String getNameTask() {
+        return nameTask;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setNameTask(String nameTask) {
+        this.nameTask = nameTask;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Task task = (Task) o;
-        return taskID == task.taskID && Objects.equals(nameTask, task.nameTask) && Objects.equals(description, task.description) && status == task.status;
+        return taskID == task.taskID && Objects.equals(nameTask, task.nameTask)
+                && Objects.equals(description, task.description) && status == task.status;
     }
 
     @Override
