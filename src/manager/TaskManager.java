@@ -12,7 +12,7 @@ public class TaskManager {
     private HashMap<Integer, Epic> storageEpic = new HashMap<>();
 
     private int genTaskId() {
-        return taskID = taskID + 1;
+        return ++taskID;
     }
 
     public void createNewTask(Task task) {
